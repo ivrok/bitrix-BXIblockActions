@@ -2,6 +2,7 @@
 
 ## Пример исопользования
 
+```
 //вывод ошибок и успешно выполненных операций
 BXIblockActions::getInstance()->output(true);
 
@@ -13,3 +14,4 @@ $reqIblockId = BXIblockActions::getInstance()->addIblock()->name('Заявка')
 
 //Создание свойства для инфоблока
 BXIblockActions::getInstance()->addProperty()->string()->iblock($reqIblockId)->name('Тип заявки')->code('type')->add();
+```
