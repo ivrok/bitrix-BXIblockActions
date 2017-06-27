@@ -11,7 +11,12 @@ class BXIblockActions {
     protected $errorAr = array();
     protected $showResult = false;
     static protected $instance = null;
-
+	
+	private function __construct()
+	{		
+		CModule::IncludeModule('main');
+		CModule::IncludeModule('iblock');
+	}
     function output($showOutput = true)
     {
         BXIblockActionsNoticement::getInstance()->output($showOutput);
